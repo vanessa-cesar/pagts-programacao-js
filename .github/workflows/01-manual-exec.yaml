@@ -36,18 +36,4 @@ jobs:
       - name: Executando testes com Mocha
         run: npx mocha trabalho/trabalho-final.js
         
-    #criar pasta 
-
-      - name: Criar pasta de relatórios (se necessário)
-        run: mkdir -p relatorios
-
-     #Criar arquivo de relatorio
-      - name: Criar arquivo de relatório de teste
-        run: echo '{"status": "ok"}' > relatorios/teste-output.json
-
-    #gerar relatorio sobre a execução manual
-      - name: Upload do artefato gerado
-        uses: actions/upload-artifact@v4
-        with:
-          name: resultado-dos-testes
-          path: relatorios/teste-output.json
+   
