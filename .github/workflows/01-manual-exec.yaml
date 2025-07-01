@@ -36,6 +36,9 @@ jobs:
       - name: Executando testes com Mocha
         run: npx mocha trabalho/trabalho-final.js
 
+      - name: Criar pasta de relatórios (se necessário)
+        run: mkdir -p relatorios
+
     #gerar relatorio sobre a execução manual
       - name: Upload do artefato gerado
         uses: actions/upload-artifact@v4
