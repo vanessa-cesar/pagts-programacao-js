@@ -38,4 +38,4 @@ jobs:
 
     #instalando os testes e2e
       - name: Executando Testes E2E
-        run: yarn run e2e
+        run: npx playwright test trabalho/trabalho-final.spec.js
