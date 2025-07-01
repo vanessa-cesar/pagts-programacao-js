@@ -32,10 +32,6 @@ jobs:
       - name: Instalando dependências
         run: yarn
 
-    #instalando plawright
-      - name: Instalando Playwright
-        run: npx playwright install 
-
     #instalando os testes e2e
-      - name: Executando Testes E2E
-        run: npx playwright test trabalho/trabalho-final.spec.js
+      - name: Executando testes com Mocha
+        run: npx mocha trabalho/trabalho-final.js
