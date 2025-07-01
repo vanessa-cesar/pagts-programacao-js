@@ -39,6 +39,9 @@ jobs:
       - name: Criar pasta de relatórios (se necessário)
         run: mkdir -p relatorios
 
+      - name: Criar arquivo de relatório de teste
+        run: echo '{"status": "ok"}' > relatorios/teste-output.json
+
     #gerar relatorio sobre a execução manual
       - name: Upload do artefato gerado
         uses: actions/upload-artifact@v4
