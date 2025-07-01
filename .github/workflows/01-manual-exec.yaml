@@ -35,10 +35,13 @@ jobs:
     #instalando os testes e2e
       - name: Executando testes com Mocha
         run: npx mocha trabalho/trabalho-final.js
+        
+    #criar pasta 
 
       - name: Criar pasta de relatórios (se necessário)
         run: mkdir -p relatorios
 
+     #Criar arquivo de relatorio
       - name: Criar arquivo de relatório de teste
         run: echo '{"status": "ok"}' > relatorios/teste-output.json
 
