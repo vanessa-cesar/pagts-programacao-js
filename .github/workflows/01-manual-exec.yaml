@@ -35,3 +35,10 @@ jobs:
     #instalando os testes e2e
       - name: Executando testes com Mocha
         run: npx mocha trabalho/trabalho-final.js
+
+    #gerar relatorio sobre a execução manual
+      - name: Upload do artefato gerado
+        uses: actions/upload-artifact@v4
+        with:
+          name: resultado-dos-testes
+          path: relatorios/teste-output.json
